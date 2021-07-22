@@ -1,12 +1,21 @@
 import React from 'react';
 import { actors } from '../data';
 
-const Actors = () => {
-  return (
-    <div>
-      {/*{code here}*/}
-    </div>
-  );
+class Actors extends React.Component {
+  render() {
+    return (
+      <div>
+        <h1>Actors Page</h1>
+        {actors.map((actor, index) => (
+          <div key={index}>
+            <h3>Name: {actor.name}</h3>
+            <p>Movies: {actor.movies}</p>
+          </div>
+        )) }
+      </div>
+    );
+  }
+  
 };
 
 export default Actors;
